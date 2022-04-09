@@ -25,7 +25,7 @@ const Topbar = (props) => {
     // <div style={{ width: '100%',  }}>
     <div style={{ width: isMobile?'100vw':'100%', padding: '20px', color: 'white', display:'flex', zIndex:99, position: 'fixed', top: '0', alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.background.main}}>
     
-    <img src={logo} width='100px' style={{ display:'block', margin: 'auto' }}/>
+    <a href='/'><img src={logo} width='100px' style={{ display:'block', margin: 'auto', marginLeft: isMobile?'-10px':'auto' }} /></a>
     {isMobile?<span style={{fontSize:'30px', cursor:"pointer", display:'block', position: 'fixed', right:'18px' }} onClick={()=>props.menuClickHandler('change')} >&#9776;</span>:null}
 
     </div>

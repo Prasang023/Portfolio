@@ -14,6 +14,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import Home from './screens/Home';
 import About from './screens/About';
 import Projects from './screens/Projects';
+import Contact from './screens/Contact';
 
 // Components import
 import Sidebar from './components/Sidebar'
@@ -60,6 +61,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
         </Routes>
       {/* </Router> */}
       <div className={classes.side}>

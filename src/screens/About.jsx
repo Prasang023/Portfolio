@@ -65,7 +65,7 @@ const About = () => {
       </div>
     </div>
 
-    <Box >
+    {/* <Box >
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} centered size='small'>
           <Tab label="WebDev"  />
@@ -86,7 +86,7 @@ const About = () => {
       <TabPanel value={value} index={3}>
         Blockchain development
       </TabPanel>
-    </Box>
+    </Box> */}
 </div>
 </>
   )

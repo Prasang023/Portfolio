@@ -32,6 +32,7 @@ const useStyles = makeStyles(theme => ({
         //   position: 'relative'
         // }
         padding: '0px',
+        
     },
     navlink: {
         color: theme.palette.text.main,
@@ -53,12 +54,16 @@ const useStyles = makeStyles(theme => ({
     mobileNavlink:{
         color: theme.palette.text.main,
         cursor: 'pointer',
-        margin: '10px'
+        margin: '10px',
+        fontSize: '7vw',
+        zIndex: 2
     },
     activeMobileNavlink:{
-        color: theme.palette.text.main,
+        color: theme.palette.primary.main,
         cursor: 'pointer',
-        margin: '10px'
+        margin: '10px',
+        fontSize: '7vw',
+        zIndex: 2,
     },
     navText: {
         fontFamily: 'Raleway',
@@ -118,7 +123,12 @@ const ModernSidebar = (props) => {
             <div className={classes.overlayContent}>
                 {navLinks.map((item)=>{
                     return (
-                        <a key={item.name} onClick={()=>handleClick(item.path)} className={(item.path===activeTab)?classes.activeMobileNavlink:classes.mobileNavlink}>{item.name}</a>
+                        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                        <a key={item.name} onClick={()=>{handleClick(item.path); props.menuClickHandler('change');}} className={(item.path===activeTab)?classes.activeMobileNavlink:classes.mobileNavlink} onMouseEnter={(e)=>e.target.style.color=theme.palette.primary.main} onMouseLeave={(item.path===activeTab)?null:(e)=>e.target.style.color=theme.palette.text.main}>{item.name}</a>
+                        <svg height="15px" width="25vw" style={{  zIndex: '1', display: (item.path===activeTab)?'block':'none' }}>
+                        <line x1="0" y1="0" x2="200" y2="0" style={{stroke:theme.palette.primary.main, strokeWidth:'3', marginRight:'0px', }} />
+                        </svg>
+                        </div> 
                     )
                 })}
             </div>
