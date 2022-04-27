@@ -7,6 +7,9 @@ import EmailIcon from '@mui/icons-material/Email';
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+//Assets import 
+import dribbble from '../assets/Dribbble.png'
+
 const socialLinks = [
     {
       icon: <GitHubIcon style={{ color:'white' }} />,
@@ -23,6 +26,10 @@ const socialLinks = [
     {
         icon: <InstagramIcon style={{ color:'white' }} />,
         link: 'https://www.instagram.com/__prasang__/'
+    },
+    {
+      icon: <img src={dribbble} width='27px' height='auto' />,
+      link: 'https://dribbble.com/prasang023'
     }
   ]
 

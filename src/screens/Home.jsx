@@ -79,7 +79,7 @@ const Home = (props) => {
       <p className={classes.sftext}>Hi I'm,</p><h1 className={classes.raletext}>Prasang</h1><p className={classes.para}>I am a CSE student at IIIT Surat. I am developing web applications, and learning the next generation Web3.0 technologies. I like learning technologies, concepts and developing projects.</p>
       {/* <Button variant="outlined" size={(theme.breakpoints.down("xs"))?'small':'large'} color="secondary">Get in touch</Button> */}
       </div>
-      <img src={photo} height='auto' width={isMobile?'90%':'55%'} alt="Profile image" style={{ position: 'fixed', bottom: '0px' }} />
+      <img src={photo} height='auto' width={isMobile?'90%':'45%'} alt="Profile image" style={{ position: 'fixed', bottom: '0px' }} />
   </div>;
 };
 

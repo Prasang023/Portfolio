@@ -15,6 +15,7 @@ import Home from './screens/Home';
 import About from './screens/About';
 import Projects from './screens/Projects';
 import Contact from './screens/Contact';
+import Resume from './screens/Resume';
 
 // Components import
 import Sidebar from './components/Sidebar'
@@ -58,10 +59,11 @@ function App() {
     <Grid item xs={12} justifyContent='center' alignItems='center' style={{ height: '100vh' }}>
       {/* <Router> */}
         <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/resume" element={<Resume />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/" element={<Home />} />
         </Routes>
       {/* </Router> */}
       <div className={classes.side}>
